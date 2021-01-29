@@ -9,7 +9,7 @@ proppi.addEventListener('click', fondWhite)
 // 2
 let proppou = document.querySelector('h3')
 let pitiCaracterou = () => {
-    proppou.style.fontSize = "smaller"
+    proppou.innerText = proppou.innerText.substring(0, proppou.innerText.length -1)
 }
 
 proppou.addEventListener('mouseover', pitiCaracterou)
@@ -27,3 +27,38 @@ let changis = () => {
 }
 
 textou.addEventListener('click', changis)
+
+
+// AUTRE METHODEEEEE
+
+let clique = false
+console.log(clique);
+console.log(!clique);
+
+monP.addEventListener('click', () => {
+    if (!clique) {
+        monP.style.cssText = "background-color:blue; color:grid"
+        clique = true
+    } else{
+        monP.style = ""
+        clique =false
+    }
+})
+
+// méthode toogle
+// monP.addEventListener('click', () => {
+//     monP.classList.toggle('color')
+// })
+
+// methode2
+// let i = 2
+// console.log(i % 2);
+// monP.addEventListener('click', () => {
+//     if (i % 2 == 0) {
+//         monP.style.cssText = "background-color:blue; color:grid"
+//         i++
+//     } else {
+//         monP.style = ""
+//         i++
+//     }
+// })
